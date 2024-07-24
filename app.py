@@ -1,8 +1,11 @@
 import flask
 from flask import request, jsonify
+from flask_cors import CORS
 from load import getprofile
 
 app = flask.Flask(__name__)
+CORS(app)
+
 
 @app.route('/api/v1/profile', methods=['GET'])
 def echo():
